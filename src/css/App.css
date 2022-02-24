@@ -1,0 +1,20 @@
+body {
+    user-select:none;
+}
+
+/** Fonts **/
+@font-face {
+    font-family: minya;
+    src: url(fonts/minya.ttf);
+}
+
+@font-face {
+    font-family: sage;
+    src: url(fonts/Sage.otf);
+
+}
+
+@font-face {
+    font-family: monice;
+    src: url(fonts/monice.ttf);
+}
