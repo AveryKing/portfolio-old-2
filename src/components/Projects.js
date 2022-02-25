@@ -37,8 +37,8 @@ function Projects() {
                 </Box>
             </Flex>
             <Grid templateColumns='repeat(5, 1fr)' mt={-20}>
-                {projects.map(({name, position, font}) =>
-                    <Project text={name} position={position} font={font}/>)}
+                {projects.map(({name, position, font},index) =>
+                    <Project key={index} text={name} position={position} font={font}/>)}
             </Grid>
         </Stack>
     );
