@@ -1,15 +1,19 @@
-import {VStack} from "@chakra-ui/layout";
+import {IconButton} from "@chakra-ui/button";
+import {useColorMode} from "@chakra-ui/color-mode";
+import {Flex, VStack, Heading, Spacer} from "@chakra-ui/layout";
+import {FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa'
 import Header from "./components/Header";
-import React from "react";
-import Projects from "./components/Projects";
-import {AnimatePresence} from 'framer-motion';
-import Nav from "./components/Nav";
-import {Route, Routes, useLocation} from "react-router-dom";
+import React, {useEffect} from "react";
 import "./css/App.css"
-import Test from "./components/Test";
+import Projects from "./components/Projects";
+import Nav from "./components/Nav";
+import {AnimatePresence} from "framer-motion";
+import {Route, Routes, useLocation} from "react-router-dom";
 
 function App() {
+
     const location = useLocation();
+
     return (
         <>
             <VStack p={5}>
@@ -19,13 +23,12 @@ function App() {
                 <Routes location={location} key={location.key}>
                     <Route path="/projects" element={<Projects/>}/>
                     <Route path="/" element={<Header/>}/>
-                    <Route path="/test" element={<Test />}/>
                 </Routes>
             </AnimatePresence>
         </>
 
     )
-
+        ;
 }
 
 export default App;
